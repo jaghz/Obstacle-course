@@ -8,5 +8,6 @@ public class ObjectHit : MonoBehaviour
     {
         // Signal when cubey hits the wall
         Debug.Log("Bumped into a wall");
+        GetComponent<MeshRenderer>().material.color = Color.black;
     }
 }
