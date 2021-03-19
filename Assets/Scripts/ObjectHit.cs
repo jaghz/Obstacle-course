@@ -6,7 +6,14 @@ public class ObjectHit : MonoBehaviour
 {
     private void OnCollisionEnter(Collision other)
     {
-        // Signal when cubey hits the wall
-        GetComponent<MeshRenderer>().material.color = Color.yellow;
+        // Signal when collision happens with player
+        if (other.gameObject.tag == "Player")
+        {
+            GetComponent<MeshRenderer>().material.color = Color.yellow;
+            
+            gameObject.tag = "Hit";
+            
+        }
+        
     }
 }
